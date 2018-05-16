@@ -4,7 +4,7 @@ public class Time
    private int second =0;
    private int minute =0;
    private int hour   =0;
-   
+   Date d1 = new Date();
    public Time()
    {
 	   this.second  = 0;
@@ -57,14 +57,16 @@ public class Time
 	   if(second>=60)
 	   {
 		   second = 0;
-	    ++minute;
+	       ++minute;
 		   if(minute>=60)
-			   minute =60;
-		++hour;
+		   {
+			   minute =0;
+		       ++hour;
+		   }
 		       if(hour>=24)
 		       {
 		    	   hour = 0;
-		           d1.nextDay();
+		    	   System.out.println(d1.nextDate());
 		       }
 	   }
 	   return this;

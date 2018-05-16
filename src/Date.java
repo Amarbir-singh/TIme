@@ -3,6 +3,12 @@ public class Date
   private int year=0;
   private int month = 0;
   private int day = 0;
+  public Date ()
+  {
+	  this.year = 2018;
+	  this.month = 05;
+	  this.day   = 15;
+  }
    public Date(int year, int month, int day)
   {
 	  this.year = year;
